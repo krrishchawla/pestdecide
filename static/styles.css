@@ -8,9 +8,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 200px;
     padding-bottom: 150px;
     font-family: 'Roboto', Arial, sans-serif;
+    
 }
 
 .heading {
@@ -23,7 +24,8 @@ body {
 }
   
   #shape {
-    margin: 250px 0px 250px 250px;
+    /* margin: 250px 0px 250px 250px; */
+    margin-left: 100px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -42,6 +44,9 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+        background-color: green;
+
+    
   }
   
   .blob {

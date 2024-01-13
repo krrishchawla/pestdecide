@@ -45,6 +45,8 @@ def process_form():
             print((f"{key}: {value}"))
             output += (f"{key}: {value}")
 
+        ## Add state processing
+
 
     return render_template('identification.html', dict_probs=output)
 
