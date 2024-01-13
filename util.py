@@ -12,10 +12,12 @@ def extract_text_from_pdf(pdf_file):
 
 
 def main():
-    model = GPT4QAModel()
-    prompt = "hello world"
-    response = model.answer_question(prompt)
-    print(response)
+    # model = GPT4QAModel()
+    # prompt = "hello world"
+    # response = model.answer_question(prompt)
+    # print(response)
+    txt = extract_text_from_pdf('./pdfs/121-34.pdf')
+    print(txt)
 
 if __name__ == "__main__":
     main()
