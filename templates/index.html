@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HarvestAI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="HarvestAI">
+        <meta name="author" content="HarvestAI">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <meta name = "viewport" content ="initial-scale=1, width=device-width">
+    </head>
+    <body>
+        <div class="heading">
+            <h1>
+                <span>Meet your new</span>
+                <span id="name">AI Consultant</span>
+                <span>for farming.</span>
+            </h1>  
+            <p>Consult with custom AI Agents to deploy better and more efficient farming practices.</p>
+            <div>
+
+                <form action="{{ url_for('explore_form') }}" method="get">
+                    <button type="submit" class="primary">Explore Pest(de)cide</button>
+                </form>
+                <button>Get in Touch</button>
+
+            </div>
+            
+        </div>
+        
+        <div class="ring">
+            <div class='ring1'></div>
+            <div class='ring2'></div>
+            <div class='ring3'></div>
+            <div class='ring4'></div>
+            <div class='ring5'></div>
+            <p>Moving towards a more sustainable environment.</p>
+        </div>
+        <!-- <script src="script.js"></script> -->
+    </body>
+</html>

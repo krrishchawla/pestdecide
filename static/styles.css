@@ -1,0 +1,401 @@
+body {
+    /* background-color: rgb(0, 0, 16); */
+    background-color: #fbfbfb;
+    color: #4b4b4b;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    font-family: 'Roboto', Arial, sans-serif;
+   
+}
+
+.heading {
+    text-align: left; /* Center the content */
+    flex-direction: column; /* Change from row to column */
+    display: flex;
+    align-items: left;
+    max-width: 500px;
+    /* background-color: green; */
+}
+
+button {
+    /* width: 120px; */
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+.primary {
+    background-color: #00a30b;
+}
+
+.primary:hover {
+    background-color: #008209;
+}
+
+.heading h1 span {
+    display: block;
+    color: #000;
+    margin-bottom: -7px
+}
+
+.heading > h1 {
+    font-size: 75px;
+    margin: 0;
+}
+
+.heading > p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.heading div {
+    display: flex;
+    width: 100%; /* Make the div full width */
+}
+
+.form-page-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+
+}
+
+.form-page-container > h1 {
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.form-page-container > p {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.form-container {
+    width: 400px;
+}
+
+.input_form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+}
+
+.input_form input {
+    padding: 20px;
+    margin-bottom: 40px; /* Add space below each input element */
+    box-sizing: border-box;
+    border: 1px solid #000000; /* Set border color */
+    border-radius: 5px;
+    background-color: #fff; /* Set background color */
+    box-shadow: none; /* Remove box shadow */
+    font-size: 16px;
+}
+
+.input_form label {
+    margin-bottom: 10px;
+    color: #000
+}
+
+.input_form button {
+    margin: 0px;
+    border-radius: 5px;
+}
+
+#name {
+    color: transparent;
+    background-image: linear-gradient(to left, #00bc09, #00bc09, #000, #000);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: sweepColor 5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+@keyframes sweepColor {
+    0%, 20%, 80%, 100% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+}
+
+
+@keyframes typewriter{
+    from { width: 0; }
+    to { width: 14em; }
+}
+
+
+#typewriter {
+    font-size: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    display: inline-block;
+    animation: blinkTextCursor 1000ms steps(50) infinite normal, fadeIn 2s ease-out forwards;
+    text-align: center;
+    border-right: 0.1em solid #000; /* Black cursor for light mode */
+    color: #000
+    /* margin: 0; */
+}
+
+@keyframes blinkTextCursor {
+    0%, 100% { border-right-color: solid white; }
+    50% { border-right-color: transparent; }
+}
+
+@keyframes blinkTextCursorLight {
+    0%, 100% { border-right-color: solid black; }
+    50% { border-right-color: transparent; }
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers items horizontally */
+    width:100%;
+}
+
+.profile-container > div {
+    display: flex;
+    flex-direction: column; /* Stack name and typewriter text vertically */
+    align-items: center; /* Center-align the text block (name and typewriter) */
+    gap: 20px; /* Space between the name and the typewriter text */
+    width: 100%;
+    text-align: left;
+}
+
+
+#profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 0 50px 3px #d8e4ff; 
+}
+
+
+.text-section {
+    max-width: 800px; /* Limit the width for better readability */
+    margin-top: 20px; 
+    text-align: left; /* Align text to the left */
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.text-section p {
+    font-size: 1.1em;
+    line-height: 1.7; /* Improve line spacing for readability */
+}
+
+a {
+    color: #000; 
+    text-decoration: underline;
+}
+
+h2 {
+    color: #000
+}
+
+a:hover {
+    color:#1e66d4;
+}
+
+/* h2 {
+    margin-bottom: 0px;
+    padding-bottom:0px;
+    font-size: 1.6em;
+} */
+
+li {
+    font-size: 1.1em;
+    line-height: 1.9em; /* Improve line spacing for readability */ 
+} 
+
+.button{
+    margin :10px;
+    padding : 10px;
+    border-width: 1px;
+    background-color: rgb(0, 0, 18);
+    color:#fff;
+    border-color: #fff;
+    font-weight: bold;
+}
+
+
+
+
+/* Responsive adjustments for screens smaller than 768px (like mobile devices) */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+        padding-left: 0px;
+    }
+
+    #profile-pic {
+        width: 200px; /* Smaller image size */
+        height: 200px;
+    }
+
+    .text-section {
+        max-width: 100%; /* Full width on small screens */
+        padding-left: 25px; 
+        padding-right: 25px; 
+        margin-top: 10px;
+    }
+
+    .text-section p {
+        font-size: 1.1em;
+        line-height: 1.9em;
+    }
+
+    .text-section #social-links{
+        text-align: center; /* Center the social links */
+        margin-bottom: 25px;
+    }
+
+    #name {
+        font-size: 50px; /* Smaller font size */
+    }
+
+    #typewriter {
+        /* Adjust the keyframes to have a black cursor */
+        animation: blinkTextCursorLight 1000ms steps(50) infinite normal;
+        margin-bottom: 0px;
+    }
+
+    .profile-container {
+        gap: 30px; /* Space between the image and the name-typewriter text block */
+    }
+
+}
+
+
+.ring {
+    margin: 125px;
+    position: relative;
+    width: 225px; 
+    height: 225px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px
+}
+
+.ring1, .ring2, .ring3, .ring4, .ring5 {
+    position: absolute;
+    inset: 0;
+    border-radius: 30%;
+    animation-timing-function: ease-in-out;
+}
+
+.ring1 {
+    border: 2px solid #8d6b58;
+    border-radius: 500px;
+    animation: animate 25s linear infinite;
+}
+
+.ring2 {
+    border: 3px solid #ffdd00;
+    border-radius: 50px;
+    animation: animate1 25s linear infinite;
+}
+
+.ring3 {
+    border: 3px solid #00ff11;
+    border-radius: 50px;
+    animation: animate2 25s linear infinite;
+}
+
+.ring4 {
+    border: 3px solid #00a30b;
+    border-radius: 50px;
+    animation: animate3 25s linear infinite;
+}
+
+.ring5 {
+    border: 3px solid #005b06;
+    border-radius: 50px;
+    animation: animate4 25s linear infinite;
+}
+
+.ring p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ring a {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes animate1 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@keyframes animate2 {
+    from {transform: rotate(360deg)}
+    to {transform: rotate(0deg)}
+}
+
+@keyframes animate3 {
+    from {transform: rotate(45deg)}
+    to {transform: rotate(405deg)}
+}
+
+@keyframes animate4 {
+    from {transform: rotate(405deg)}
+    to {transform: rotate(45deg)}
+}
