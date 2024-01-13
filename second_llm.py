@@ -7,13 +7,17 @@ def question_list():
         ]
     return lst
 
-eparegno_shortlist = ["34810-21", "5383-55"]
 
 def add_summary(eparegno_shortlist):
     info = {}
     # Load data from epa_regno_info.json
     with open('epa_regno_info.json', 'r') as file:
         epa_regno_info = json.load(file)
+
+    # make the 
+    filtered_epa_info = [item for item in epa_regno_info if any(pest.get("pest", "").lower() == user_inputted_pest.lower() for pest in item.get("pests", []))]
+    eparegno_shortlist = [item["eparegno"] for item in filtered_epa_info]
+
 
     for eparegno in eparegno_shortlist:
         # Create the summary file path
