@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from PIL import Image
 import numpy as np
-import io
 
 app = Flask(__name__)
 
