@@ -12,9 +12,9 @@
     <body>
         <div class="heading">
             <h1>
-                <span>Meet your new</span>
-                <span id="name">AI Consultant</span>
-                <span>for farming.</span>
+                <span>Meet </span>
+                <span id="name">pestDecide</span>
+                <span>: your new AI farmhand.</span>
             </h1>  
             <p>Consult with custom AI Agents to deploy better and more efficient farming practices.</p>
             <div>
@@ -28,13 +28,70 @@
             
         </div>
         
-        <div class="ring">
+        <div id='shape'>
+            <script type="text/javascript">
+                console.clear();
+                const shape = document.getElementById('shape')
+
+                const radii = {
+                top: 50,
+                right: 50,
+                bottom: 50,
+                left: 50
+                }
+
+                const dx = {
+                top: [],
+                right: [],
+                bottom: [],
+                left: []
+                }
+
+                const formatBorderRadius = (top, right, bottom, left) => {
+                return `${top}% ${100-top}% ${100-bottom}% ${bottom}% / ${left}% ${right}% ${100-right}% ${100-left}%`
+                }
+
+                const updateBorderRadius = (top, right, bottom, left) => {
+                shape.style.borderRadius = formatBorderRadius(top, right, bottom, left);
+                }
+
+                const random = (x) => 2 * x * (0.5 - Math.random())
+
+                const smoothChange = (x, dx) => {
+                if (dx.length > 60) dx.shift();
+                
+                dx.push(random(5) + (50 - x)/20)
+                
+                x = x + dx.reduce((a,b) => a+b)/dx.length
+                
+                return [x, dx]
+                }
+
+                setInterval(() => {
+                [radii.top, dx.top] = smoothChange(radii.top, dx.top);
+                [radii.right, dx.right] = smoothChange(radii.right, dx.right);
+                [radii.bottom, dx.bottom] = smoothChange(radii.bottom, dx.bottom);
+                [radii.left, dx.left] = smoothChange(radii.left, dx.left);
+                
+                updateBorderRadius(
+                    radii.top,
+                    radii.right,
+                    radii.bottom,
+                    radii.left
+                )
+                }, 
+                15
+                )
+            </script>
+        </div>
+
+        <!-- <div class="ring">
             <div class='ring1'></div>
             <div class='ring2'></div>
             <div class='ring3'></div>
             <div class='ring4'></div>
             <div class='ring5'></div>
-        </div>
+        </div> -->
         <!-- <script src="script.js"></script> -->
     </body>
 </html>

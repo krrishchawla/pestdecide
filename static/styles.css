@@ -11,7 +11,6 @@ body {
     padding-top: 150px;
     padding-bottom: 150px;
     font-family: 'Roboto', Arial, sans-serif;
-   
 }
 
 .heading {
@@ -22,6 +21,57 @@ body {
     max-width: 500px;
     /* background-color: green; */
 }
+  
+  #shape {
+    margin: 250px 0px 250px 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 250px;
+    width: 250px;
+    background-image: linear-gradient(45deg, rgba(231,156,24,1) 24%, rgb(36, 204, 53) 100%);
+}
+
+.blob-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .blob1 {
+    background-color: rgba(255, 0, 0, 0.2); /* Adjust color and transparency */
+    width: 200px;
+    height: 200px;
+    top: 20vh;
+    left: 20vw;
+  }
+  
+  .blob2 {
+    background-color: rgba(0, 255, 0, 0.2); /* Adjust color and transparency */
+    width: 150px;
+    height: 150px;
+    top: 50vh;
+    left: 50vw;
+  }
+  
+  .blob3 {
+    background-color: rgba(0, 0, 255, 0.2); /* Adjust color and transparency */
+    width: 180px;
+    height: 180px;
+    top: 70vh;
+    left: 80vw;
+  }
 
 button {
     /* width: 120px; */
