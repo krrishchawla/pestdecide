@@ -1,13 +1,11 @@
 import asyncio
 from flask import Flask, request, render_template
-from flask_executor import Executor
 from PIL import Image
 import numpy as np
 from clip import get_probs
 import json
 
 app = Flask(__name__)
-executor = Executor(app)
 
 @app.route('/')
 def index():
@@ -46,8 +44,6 @@ def process_form():
         for key, value in sorted_dict_probs.items():
             print((f"{key}: {value}"))
             output += (f"{key}: {value}")
-
-
 
 
     return render_template('identification.html', dict_probs=output)
