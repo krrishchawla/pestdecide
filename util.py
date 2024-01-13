@@ -58,6 +58,25 @@ def populate_summaries():
             print(f"PdfReadError for file {file}: {e}")
 
 
+def list_pests_with_banned_regions():
+    files_with_ban_info = []
+
+    for file in os.listdir('./summaries'):
+        if file.endswith('.json'):
+            file_path = os.path.join('./summaries', file)
+
+            try:
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                    # Check if the key exists and is not an empty string
+                    if data.get("Is this product banned in any region?", "") != "":
+                        files_with_ban_info.append(file)
+            except json.JSONDecodeError as e:
+                print(f"Error reading JSON from file {file}: {e}")
+
+    print(files_with_ban_info)
+
+
 def main():
     # model = GPT4QAModel()
     # pdf = extract_text_from_pdf('./pdfs/121-34.pdf')
@@ -69,6 +88,7 @@ def main():
     for ls in lst:
         print(ls.replace('.json', ''))
 
+    
 
 if __name__ == "__main__":
     main()
