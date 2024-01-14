@@ -9,13 +9,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="initial-scale=1, width=device-width">
     </head>
-    <body>
+    <body class="identi_body">
         <div class="form-page-container">
-            <h1 id="name">Results on valid pesticides</h1>
+            <h1 id="name">Pesticide Recommendations</h1>
+
             <h3>Pest found: {{ pest }}</h3>
-            <h3>Pest match: {{ percentage }}</h3>
-            <h3>Crop: {{ crop }}</h3>
-            <h3>Location: {{ location }}</h3>
+            <h3>Pest confidence: {{ percentage }} %</h3>
+            <h3>Crop intended for: {{ crop }}</h3>
+            <h3>Location of application: {{ location }}</h3>
+
+            <p>pestDecide found the following options for suitable pesticides given your relevant information</p>
 
             <!-- Iterate through all key-value pairs in dict_probs -->
             {% for pesticide_number, details in dict_probs.items() %}

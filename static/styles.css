@@ -18,6 +18,11 @@ body {
     
 }
 
+.identi_body {
+    padding-top: 50px;
+    color: #000;
+}
+
 .heading {
     text-align: left; /* Center the content */
     flex-direction: column; /* Change from row to column */
