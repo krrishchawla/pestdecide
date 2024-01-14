@@ -2,8 +2,9 @@ import json
 
 def question_list():
     lst = [
-        "Pros",
-        "Cons",
+        "What is the price?",
+        "Considerations",
+        "Signal_word",
         "Valid Crop",
         "Valid Location"
         ]
@@ -101,11 +102,13 @@ def get_prompt2(crop, location, pest, topK):
         The JSON I provide below, called "info.json", has several details about each pesticide use.
         I will also provide a list with information on the crop and geographical location the pesticide will be used in.
 
-        Using just this info, I need the pros, cons, and whether it can be used on the specified crop and location for each pesticide within 100 words.
+        Using just this info, I need the answers to the questions I provide.
 
-        I want you to output a JSON file, with the "eparegnos" I provide as keys for each pesticide with this structure: pros, cons, bool if it can work with specified crop (assume true unless noted otherwise), and bool if it can work in a specific geographical region (assume true unless noted otherwise).
+        I want you to output a JSON file, with the "eparegnos" I provide as keys for each pesticide with my list of questions. For boolean values like valid crop or location, assume true unless noted otherwise.
 
-        If no relevant pros or cons exist, add an empty string for that key. Assume true for the crop and location fields. 
+        If no relevant answer exists, add an empty string for that key. Assume true for the crop and location fields. 
+
+        In the considerations field, also give me pros or cons you may think are good in simple terms.
 
         Do not hallucinate, only answer based on the text I provide. Please be accurate, this is very important. 
 
@@ -119,6 +122,8 @@ def get_prompt2(crop, location, pest, topK):
         '''
     return seed
 
+
+tst = 'Using just this info, I need the pros, cons, and whether it can be used on the specified crop and location for each pesticide within 100 words.'
 
 if __name__ == '__main__':
     pass
