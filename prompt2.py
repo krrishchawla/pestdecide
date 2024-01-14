@@ -32,7 +32,7 @@ def add_summary(user_inputted_pest, topK):
 
             if epa_info:
                 # Add only selected details from epa_regno_info.json to the summary_data
-                selected_keys = ['signal_word', 'active_ingredients', 'types']
+                selected_keys = ['signal_word', 'active_ingredients', 'types', 'price']
                 for key in selected_keys:
                     if key in epa_info:
                         summary_data[key] = epa_info[key]
