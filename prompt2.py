@@ -52,6 +52,7 @@ def add_summary(user_inputted_pest, topK):
 def get_prompt2(crop, location, pest, topK):
     lst = question_list()
     details = add_summary(pest, topK)
+    print(pest)
     seed = f'''
         You are an assistant that is summarizing information about the pesticide provided below. 
         The JSON I provide below, called "info.json", has several details about each pesticide use.

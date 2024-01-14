@@ -8,7 +8,6 @@ import json
 from json.decoder import JSONDecodeError
 from tqdm import tqdm
 from PyPDF2.errors import PdfReadError
-
 from prompt2 import get_prompt2
 
 
@@ -79,14 +78,20 @@ def list_pests_with_banned_regions():
     print(files_with_ban_info)
 
 
-def main():
-
-
+def final_response(crop, state, pest, topk):
     model = GPT4QAModel()
-    prompt = get_prompt2('corn', 'california', 'gnats', 3)
-    print(prompt)
+    prompt = get_prompt2(crop, state, pest, topk)
+    # print(prompt)
     response = model.answer_question(prompt)
-    print(response)
+    # print(response)
+    return response
+
+
+def main():
+    pass
+
+
+    
 
     
 

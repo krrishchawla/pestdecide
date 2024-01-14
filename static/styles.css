@@ -12,11 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< Updated upstream
     padding-top: 175px;
-=======
-    padding-top: 150px;
->>>>>>> Stashed changes
     padding-bottom: 150px;
     font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
     
@@ -91,11 +87,28 @@ button {
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 20px;
     padding: 20px;
     margin-right: 20px;
     font-weight: bold;
+}
+
+h3 {
+    margin: 5px;
+}
+
+.pesticide-info-box {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pesticide-info-box h4 {
+    margin-top: 0;
 }
 
 button:hover {
@@ -104,7 +117,7 @@ button:hover {
 
 .primary {
     background-color: #00a30b;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .primary:hover {

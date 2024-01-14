@@ -11,10 +11,21 @@
     </head>
     <body>
         <div class="form-page-container">
-            <h1 id="name">Introducing pestDecide</h1>
-            <h1> {{dict_probs}}</h1>
-            <!-- Iterate through all key-value pairs in dict_probs -->
+            <h1 id="name">Results on valid pesticides</h1>
+            <h3>Pest found: {{ pest }}</h3>
+            <h3>Pest match: {{ percentage }}</h3>
+            <h3>Crop: {{ crop }}</h3>
+            <h3>Location: {{ location }}</h3>
 
+            <!-- Iterate through all key-value pairs in dict_probs -->
+            {% for pesticide_number, details in dict_probs.items() %}
+                <div class="pesticide-info-box">
+                    <h4>Pesticide Number: {{ pesticide_number }}</h4>
+                    {% for key, value in details.items() %}
+                        <p><strong>{{ key.capitalize() }}:</strong> {{ value }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
     </body>
 </html>
