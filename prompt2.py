@@ -1,3 +1,5 @@
+import json
+
 def question_list():
     lst = [
         "Pros",
@@ -8,18 +10,15 @@ def question_list():
     return lst
 
 
-def add_summary(eparegno_shortlist):
+def add_summary(user_inputted_pest, topK):
     info = {}
     # Load data from epa_regno_info.json
     with open('epa_regno_info.json', 'r') as file:
         epa_regno_info = json.load(file)
 
-    # make the 
-    filtered_epa_info = [item for item in epa_regno_info if any(pest.get("pest", "").lower() == user_inputted_pest.lower() for pest in item.get("pests", []))]
-    eparegno_shortlist = [item["eparegno"] for item in filtered_epa_info]
+    eparegno_shortlist = [item["eparegno"] for item in epa_regno_info if any(pest.get("pest", "").lower() == user_inputted_pest.lower() for pest in item.get("pests", []))]
 
-
-    for eparegno in eparegno_shortlist:
+    for eparegno in eparegno_shortlist[:topK]:
         # Create the summary file path
         summary_file_path = f"summaries/{eparegno}.json"
 
@@ -32,8 +31,11 @@ def add_summary(eparegno_shortlist):
             epa_info = next((item for item in epa_regno_info if item['eparegno'] == eparegno), None)
 
             if epa_info:
-                # Add details from epa_regno_info.json to the summary_data
-                summary_data.update(epa_info)
+                # Add only selected details from epa_regno_info.json to the summary_data
+                selected_keys = ['signal_word', 'active_ingredients', 'types']
+                for key in selected_keys:
+                    if key in epa_info:
+                        summary_data[key] = epa_info[key]
 
                 # Add the summary data to the global variable info
                 info[eparegno] = summary_data
@@ -42,14 +44,14 @@ def add_summary(eparegno_shortlist):
 
         except FileNotFoundError:
             print(f"Summary file not found for Eparegno: {eparegno}")
+    
+    return info
 
 
 
-
-def get_prompt():
+def get_prompt2(crop, location, pest, topK):
     lst = question_list()
-    details = add_summary(eparegno_shortlist)
-    #parametrs user_input
+    details = add_summary(pest, topK)
     seed = f'''
         You are an assistant that is summarizing information about the pesticide provided below. 
         The JSON I provide below, called "info.json", has several details about each pesticide use.
@@ -65,11 +67,15 @@ def get_prompt():
 
         Here is the list of pros and cons: {lst}
 
-        Here is the "info.json" you need to find answers in:
+        Here is the "info.json" you need to find answers in (the keys are the names of the pesticides.)
         {details}
 
-        Here is the crop and location data [{},{}]
+        Here is the crop and location data [{crop},{location}]
 
         '''
     return seed
+
+
+if __name__ == '__main__':
+    pass
     

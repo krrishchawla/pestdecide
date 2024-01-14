@@ -12,7 +12,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< Updated upstream
     padding-top: 175px;
+=======
+    padding-top: 150px;
+>>>>>>> Stashed changes
     padding-bottom: 150px;
     font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
     

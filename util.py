@@ -9,6 +9,8 @@ from json.decoder import JSONDecodeError
 from tqdm import tqdm
 from PyPDF2.errors import PdfReadError
 
+from prompt2 import get_prompt2
+
 
 def extract_text_from_pdf(pdf_file):
     pdf_text = ""
@@ -78,15 +80,13 @@ def list_pests_with_banned_regions():
 
 
 def main():
-    # model = GPT4QAModel()
-    # pdf = extract_text_from_pdf('./pdfs/121-34.pdf')
-    # seed = get_prompt(pdf_text=pdf)
-    # response = model.answer_question(seed)
-    # print(response)
-    # populate_summaries()
-    lst = os.listdir('./summaries')
-    for ls in lst:
-        print(ls.replace('.json', ''))
+
+
+    model = GPT4QAModel()
+    prompt = get_prompt2('corn', 'california', 'gnats', 3)
+    print(prompt)
+    response = model.answer_question(prompt)
+    print(response)
 
     
 
