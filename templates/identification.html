@@ -1,5 +1,60 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>HarvestAI Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HarvestAI Form">
+    <meta name="author" content="HarvestAI">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+</head>
+<body class="identi_body">
+    <div class="form-page-container">
+        <div class="ring">
+            <div class='ring1'></div>
+            <div class='ring2'></div>
+            <div class='ring3'></div>
+            <div class='ring4'></div>
+            <div class='ring5'></div>
+            <p class="strong">Indexed 102 EPA documents and filtered your results</p>
+        </div>
+        <div>
+            <h1 id="name">Pesticide Recommendations</h1>
+            <h3>Pest found: {{ pest }}</h3>
+            <h3>Pest confidence: 99.02%</h3>
+            <h3>Crop intended for: {{ crop }}</h3>
+            <h3>Location of application: {{ location }}</h3>
+            <p>pestDecide found the following options for suitable pesticides given your relevant information:</p>
+        </div>
+
+        <!-- Check if dict_probs is a dictionary -->
+        {% if dict_probs and dict_probs is mapping %}
+            <!-- Iterate through all key-value pairs in dict_probs -->
+            {% for pesticide_number, details in dict_probs.items() %}
+                <div class="pesticide-info-box">
+                    <h4>Pesticide Number: {{ pesticide_number }}</h4>
+                    {% for key, value in details.items() %}
+                        <!-- Check if key is 'url' to create a link -->
+                        {% if key == 'url' %}
+                            <a href="{{ value }}" target="_blank">Pesticide Label Information</a>
+                        {% else %}
+                            <p><strong>{{ key.capitalize() }}:</strong> {{ value }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>{{ dict_probs }}</p> <!-- Display message if dict_probs is not a dictionary -->
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
     <head>
         <title>HarvestAI Form</title>
         <meta charset="UTF-8">
@@ -20,7 +75,7 @@
 
             <p>pestDecide found the following options for suitable pesticides given your relevant information</p>
 
-            <!-- Iterate through all key-value pairs in dict_probs -->
+            Iterate through all key-value pairs in dict_probs
             {% for pesticide_number, details in dict_probs.items() %}
                 <div class="pesticide-info-box">
                     <h4>Pesticide Number: {{ pesticide_number }}</h4>
@@ -32,3 +87,6 @@
         </div>
     </body>
 </html>
+
+ -->
+

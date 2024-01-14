@@ -406,12 +406,16 @@ li {
 
 }
 
+.strong {
+    font-size: 'bold';
+}
+
 
 .ring {
-    margin: 125px;
+    margin: 20px;
     position: relative;
-    width: 225px; 
-    height: 225px; 
+    width: 150px; 
+    height: 150px; 
     display: flex;
     justify-content: center;
     align-items: center;

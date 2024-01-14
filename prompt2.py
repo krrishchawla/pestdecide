@@ -49,6 +49,49 @@ def add_summary(user_inputted_pest, topK):
 
 
 
+# def get_prompt2(crop, location, pest, topK):
+#     lst = question_list()
+#     details = add_summary(pest, topK)
+#     seed = f'''You are helping a small local farmer decide what pesticide to use for a {crop} grown in {location} that is infected with {pest}.
+# Here is some information about a pesticide — please summarize it into a list of the PESTS it can be used on and provide useful INFO about the pesticide.
+# In addition, include two booleans.
+
+# 1. If the pesticide is not acceptable for the given crop, and the farmer is growing "grapes", and the JSON says "do not use on grapes", you would return (INVALID CROP = true). Otherwise you would return false.
+# 2. Meanwhile, if the pesticide is not acceptable for the given region (for instance, if we are in Texas and the crop cannot be grown in Texas), return (INVALID LOCATION = true). Otherwise, return false.
+# Return false for both Valid Crop and Valid Location, unless it explicitly says you cannot.
+
+# For the sake of example, here is some unrelated example output for a random JSON file.
+
+# {{ 
+#     "305-42": {{
+#         "Pests": ["Biting flies", "Gnats", "Mosquitoes", "Ticks", "Chiggers (Redbugs)"],
+#         "Info": "The product should not be used on cuts, wounds, sunburned, or irritated skin. It should not be used under clothing and over-application should be avoided.",
+#         "Valid Crop": false,
+#         "Valid Location": true,
+#         "Price": $10.99
+#     }},
+#     "305-49": {{
+#         "Pests": ["Biting flies", "Gnats", "No-see-ums", "Sand Flies", "Mosquitoes", "Black flies", "Deer flies", "Fleas", "Ticks", "Biting insects", "Chiggers (Redbugs)"],
+#         "Info": "The product is for outdoor use only and should not be sprayed in enclosed areas. It should not be used under clothing and over-application should be avoided. It is not suitable for direct application on the face.",
+#         "Valid Crop": false,
+#         "Valid Location": true,
+#         "Price": $3.99
+#     }},
+#     "4822-399": {{
+#         "Pests": ["Biting flies", "Gnats", "Sand flies", "Mosquitoes", "Stable fly", "Black flies", "Deer flies", "Fleas", "Ticks", "Chiggers (Redbugs)"],
+#         "Info": "The product should not be applied over cuts, wounds, irritated or sunburned skin. It should not be sprayed in enclosed areas, and over-application should be avoided.",
+#         "Valid Crop": false,
+#         "Valid Location": true,
+#         "Price": $1.99
+#     }}
+# }}
+
+# Now, try it for {crop} grown in {location}. Here is the relevant JSON file. 
+# {details}
+# '''
+
+#     return seed
+
 def get_prompt2(crop, location, pest, topK):
     lst = question_list()
     details = add_summary(pest, topK)
