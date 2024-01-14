@@ -211,7 +211,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 31.3
+    "price": 31.3,
+    "restricted_crops": "Cotton, Okra, Flowers, Grapes, Fruit Trees, Soybeans, Ornamentals, Sunflowers, Tomatoes, Beans, Other Vegetables, Tobacco"
   },
   {
     "eparegno": "305-42",
@@ -320,7 +321,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 35.3
+    "price": 35.3,
+    "restricted_crops": ""
   },
   {
     "eparegno": "33560-48",
@@ -688,7 +690,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 36.18
+    "price": 36.18,
+    "restricted_crops": ""
   },
   {
     "eparegno": "19713-296",
@@ -1030,7 +1033,8 @@
         "type": "MITICIDE"
       }
     ],
-    "price": 36.31
+    "price": 36.31,
+    "restricted_crops": ""
   },
   {
     "eparegno": "279-3384",
@@ -1236,7 +1240,8 @@
         "type": "MITICIDE"
       }
     ],
-    "price": 25.69
+    "price": 25.69,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-49",
@@ -1395,7 +1400,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 12.2
+    "price": 12.2,
+    "restricted_crops": ""
   },
   {
     "eparegno": "4822-399",
@@ -1619,7 +1625,8 @@
         "type": "REPELLENT"
       }
     ],
-    "price": 13.01
+    "price": 13.01,
+    "restricted_crops": ""
   },
   {
     "eparegno": "101563-23",
@@ -1995,7 +2002,8 @@
         "type": "MITICIDE"
       }
     ],
-    "price": 11.97
+    "price": 11.97,
+    "restricted_crops": ""
   },
   {
     "eparegno": "3862-92",
@@ -2170,7 +2178,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 38.22
+    "price": 38.22,
+    "restricted_crops": "Cotton, Okra, Flowers, Grapes, Fruit Trees, Soybeans, Ornamentals, Sunflowers, Tomatoes, Beans, Other Vegetables, Tobacco"
   },
   {
     "eparegno": "121-34",
@@ -2357,7 +2366,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 27.94
+    "price": 27.94,
+    "restricted_crops": ""
   },
   {
     "eparegno": "121-53",
@@ -2486,7 +2496,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 36.76
+    "price": 36.76,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-50",
@@ -2648,7 +2659,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 19.66
+    "price": 19.66,
+    "restricted_crops": ""
   },
   {
     "eparegno": "103184-2",
@@ -3029,7 +3041,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 33.83
+    "price": 33.83,
+    "restricted_crops": ""
   },
   {
     "eparegno": "70506-139",
@@ -3327,7 +3340,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 30.9
+    "price": 30.9,
+    "restricted_crops": ""
   },
   {
     "eparegno": "1624-39",
@@ -3549,7 +3563,8 @@
         "type": "MITICIDE"
       }
     ],
-    "price": 37.76
+    "price": 37.76,
+    "restricted_crops": ""
   },
   {
     "eparegno": "4822-396",
@@ -3722,7 +3737,8 @@
         "type": "REPELLENT"
       }
     ],
-    "price": 18.84
+    "price": 18.84,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-29",
@@ -3891,7 +3907,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 19.23
+    "price": 19.23,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-48",
@@ -4038,7 +4055,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 38.27
+    "price": 38.27,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-44",
@@ -4167,7 +4185,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 31.69
+    "price": 31.69,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-51",
@@ -4331,7 +4350,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 33.31
+    "price": 33.31,
+    "restricted_crops": ""
   },
   {
     "eparegno": "53883-506",
@@ -4590,7 +4610,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 16.36
+    "price": 16.36,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-47",
@@ -4730,7 +4751,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 23.26
+    "price": 23.26,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-46",
@@ -4888,7 +4910,8 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 17.6
+    "price": 17.6,
+    "restricted_crops": ""
   },
   {
     "eparegno": "33560-47",
@@ -5233,7 +5256,8 @@
         "type": "HERBICIDE TERRESTRIAL"
       }
     ],
-    "price": 34.92
+    "price": 34.92,
+    "restricted_crops": ""
   },
   {
     "eparegno": "305-52",
@@ -5358,6 +5382,7 @@
         "type": "REPELLENT OR FEEDING DEPRESSANT"
       }
     ],
-    "price": 37.35
+    "price": 37.35,
+    "restricted_crops": ""
   }
 ]
