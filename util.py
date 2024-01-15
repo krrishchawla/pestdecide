@@ -88,12 +88,13 @@ def final_response(crop, state, pest, topk):
 
 
 def main():
-    pass
+    model = GPT4QAModel()
+    prompt = "Hello"
+    response = model.answer_question(prompt)
+    print(response)
 
 
-    
 
-    
 
 if __name__ == "__main__":
     main()
